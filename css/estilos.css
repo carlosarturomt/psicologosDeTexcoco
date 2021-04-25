@@ -1,0 +1,419 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Padauk', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+header {
+  background: #FEFEFE;
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 5px;
+  transition: .3s ease all;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+header .logotipo {
+  font-weight: 700;
+}
+
+header .enlaces {
+  display: flex;
+  align-items: center;
+}
+
+header .enlaces a {
+  margin-right: 40px;
+}
+
+header .enlaces a:hover {
+  color: #ACABAB;
+}
+
+.nav_100-fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  display: none;
+  margin-left: auto;
+  color: #000;
+  line-height: 60px;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.logo a {
+  color: gray;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-family: "Press Start2P", cursive;
+}
+
+.logo {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: .08%;
+  width: 50px;
+  height: 60px;
+  padding-bottom: 10px;
+}
+
+#menu {
+  margin-left: auto;
+}
+
+#menu ul li {
+  display: inline-block;
+}
+
+#menu ul li a {
+  font-size: 1.5rem;
+  display: inline-block;
+  position: relative;
+  color: gray;
+  text-decoration: none;
+  line-height: 50px;
+  padding: 0 9px;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+#menu ul li a:hover {
+  background: whitesmoke;
+}
+
+.show {
+  height: auto !important;
+}
+
+@media screen and (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+  #menu {
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border: 0px solid #eee;
+    overflow: hidden;
+    transition: .3s ease-out;
+  }
+  #menu ul li {
+    display: block;
+    text-align: center;
+  }
+  #menu ul li a {
+    color: gray;
+    font-size: 2rem;
+    border-bottom: 0px solid white;
+    width: 100%;
+  }
+  #menu ul li a:hover {
+    background: whitesmoke;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+
+a {
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 40%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.container p {
+  margin-bottom: 10px;
+}
+
+.navTop {
+  margin-top: 5px;
+}
+
+.buttonStyle {
+  margin-left: auto;
+}
+
+aside {
+  border: red solid 1px;
+  position: relative;
+  top: 10rem;
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 0%;
+  margin-bottom: 11rem;
+}
+
+picture img {
+  display: block;
+  width: 60%;
+  max-width: 280px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border: #ffffff solid 8px;
+  border-radius: 50%;
+}
+
+aside h1 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 1px 1px 2px white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+aside h2 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  color: #494949;
+  text-shadow: 1px 1px 2px white;
+  text-align: center;
+}
+
+.button {
+  background-color: #000;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.map {
+  display: inline-block;
+  width: 20px;
+  height: 25px;
+  background-image: url(https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/google-map.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.verified {
+  position: absolute;
+  margin-top: -3px;
+  margin-left: -25px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url(https://images.vexels.com/media/users/3/157931/isolated/preview/604a0cadf94914c7ee6c6e552e9b4487-icono-de-c-iacute-rculo-de-marca-de-verificaci-oacute-n-curvo-by-vexels.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+aside a,
+p {
+  width: 100%;
+  margin: 2% 0%;
+  font-size: 1.5rem;
+  color: #494949;
+  text-align: center;
+}
+
+article {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3% 0%;
+}
+
+article h2 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  color: #494949;
+  text-shadow: 1px 1px 2px white;
+  text-align: center;
+}
+
+article p {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.button_WhatsApp {
+  display: block;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  z-index: 999;
+}
+
+.button_WhatsApp .img_whatsapp-home {
+  width: 100%;
+}
+
+.currency-table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h3 {
+  width: 90%;
+  margin: 10% 5% 2.5% 5%;
+  font-size: 2.1rem;
+  text-shadow: 1px 1px 2px white;
+  text-align: center;
+}
+
+.text-blue {
+  color: #00a5f1;
+}
+
+.text-green {
+  color: #00a700;
+}
+
+.currency-table1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.currency-table2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+}
+
+.currency-table--container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 6rem;
+}
+
+.currency-table--container table {
+  border: #000 transparent 1px;
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table--container td {
+  width: 50%;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: gray;
+  padding-left: 15%;
+  background-color: white;
+}
+
+.currency-table--container .table__top-left {
+  border-radius: 15px 0 0 0;
+}
+
+.currency-table--container .table__top-right {
+  border-radius: 0 15px 0 0;
+}
+
+.currency-table--container .table__bottom-left {
+  border-radius: 0 0 0 15px;
+}
+
+.currency-table--container .table__bottom-right {
+  border-radius: 0 0 15px 0;
+}
+
+.currency-table--container .table__right {
+  width: 35%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+  padding: 5%;
+}
+
+.currency-table--container .ansiedad {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  background-image: url("/assets/icons/ansiedad.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table--container .depresion {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  background-image: url("/assets/icons/depresion.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table--container .confuse {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  background-image: url("/assets/icons/confusing.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table--container .idea {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  background-image: url("/assets/icons/idea.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
