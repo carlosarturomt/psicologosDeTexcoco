@@ -1,0 +1,94 @@
+/* ESCRITORIO  */
+
+aside h1 {
+    margin-top: 5px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.main-container-photo {
+    order: 0;
+    width: 100%;
+    max-width: 410px;
+    border: #00a5f1 solid 2px;
+    border-radius: 4px;
+}
+
+.main-container-photo--agendar {
+    width: 20%;
+    max-width: 900px;
+    border: #00a5f1 solid 2px;
+    border-radius: 5%;
+    margin: 0 40%;
+}
+
+.contacto-h1 {
+    /* border: red solid 1px; */
+    position: relative;
+    width: 40%;
+    top: 5px;
+    left: 0%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contacto-h2 {
+    /* border: red solid 1px; */
+    position: relative;
+    width: 40%;
+    top: 2.5px;
+    left: 0%;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+iframe {
+    border: #00a5f1 solid 2px;
+}
+
+.main-container-inf {
+    width: 55% !important;
+    margin: 0 auto;
+    order: 1;
+    width: 100%;
+}
+
+.button {
+    position: absoleute;
+    top: 48rem;
+    left: 0%;
+    width: 50%;
+    max-width: 410px;
+}
+
+.button a {
+    float: right;
+    padding: 1.5% 11%;
+    color: #00a5f1;
+    border: #00a5f1 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button a:hover {
+    background-color: #00a5f1;
+    color: white;
+    border: white 1.5px solid;
+}
+
+.none {
+    display: none !important;
+}
+
+.noneMobile {
+    display: inherit !important;
+}

@@ -9,8 +9,8 @@ $grisClaroHover: #ACABAB;
 $azul: #00a5f1;
 $azultext: #00313f;
 $azulshadow: #22bced;
-$azulHover: #5b7dbc7e;
-$azulNoHover: #2d4363;
+$azulHover: #e1f6ff;
+$azulNoHover: #2d5463;
 $azuldark: #00090c;
 $sombraDark: 10px 10px 20px rgba(170, 170, 170, .16);
 $sombraLight: 10px 10px 0px rgba(0, 0, 0, .16);
@@ -29,17 +29,20 @@ body {
     background-color: whitesmoke;
 }
 
-// headerX
+// BARRA DE NAVEGACIÓN
 header {
-    background: $blanco;
-    height: 50px;
+    background-image: url(https://image.freepik.com/vector-gratis/terapia-consejeria-familiar_186332-449.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    border-radius: 5px;
     transition: .3s ease all;
     box-shadow: $sombraDark;
+    z-index: 0;
     .logotipo {
         font-weight: 700;
     }
@@ -53,38 +56,44 @@ header {
             }
         }
     }
+    @media screen and (min-width:700px) {
+        background: $blanco;
+        height: 60px;
+    }
 }
 
 .nav_100-fixed {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    z-index: 1000;
 }
 
 .menu-toggle {
     display: none;
     margin-left: auto;
-    color: $negro;
+    color: $blanco;
     line-height: 60px;
     font-size: 2.5rem;
     cursor: pointer;
+    z-index: 4;
 }
 
 .logo a {
-    color: gray;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
     font-size: 2rem;
+    text-shadow: 2px 2px 4px $negro;
     line-height: 60px;
-    text-transform: uppercase;
     font-family: "Press Start2P", cursive;
 }
 
 .logo {
-    margin-top: 2px;
+    display: inherit;
+    margin-top: 5px;
     margin-bottom: 2px;
     margin-left: .08%;
-    width: 50px;
-    height: 60px;
+    width: 95px;
+    height: 50px;
     padding-bottom: 10px;
 }
 
@@ -104,12 +113,11 @@ header {
     text-decoration: none;
     line-height: 50px;
     padding: 0 9px;
-    text-transform: uppercase;
     transition: .2s;
 }
 
 #menu ul li a:hover {
-    background: whitesmoke;
+    color: $azul;
 }
 
 .show {
@@ -121,28 +129,28 @@ header {
         display: block;
     }
     #menu {
-        background: white;
         position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
+        background-color: $azultext;
+        border-radius: 10px;
+        z-index: -1;
+        left: 50%;
+        width: 50%;
         height: 0;
-        border: 0px solid #eee;
         overflow: hidden;
         transition: .3s ease-out;
+        z-index: 3;
     }
     #menu ul li {
         display: block;
         text-align: center;
     }
     #menu ul li a {
-        color: gray;
-        font-size: 2rem;
+        margin: 10px 0;
+        color: $blanco;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
         border-bottom: 0px solid white;
         width: 100%;
-    }
-    #menu ul li a:hover {
-        background: whitesmoke;
     }
     .container {
         padding: 10px;
@@ -173,39 +181,30 @@ a {
     margin-bottom: 10px;
 }
 
-.navTop {
-    margin-top: 5px;
-}
-
 .buttonStyle {
     margin-left: auto;
 }
 
 // Sección Imagen
 aside {
-    border: red solid 1px;
+    // border: red solid 1px;
     position: relative;
-    top: 10rem;
-    // background-color: whitesmoke;
+    top: 9rem;
     border-radius: 20px;
     width: 90%;
     margin: 0 auto;
     padding: 5% 0%;
     margin-bottom: 11rem;
-    // @media screen and (min-width: 700px) {
-    //     padding: 3% 0%;
-    // }
+    @media screen and (min-width: 700px) {
+        width: 90%;
+    }
 }
 
 picture img {
     display: block;
-    width: 60%;
-    // width: 250px;
-    // height: 250px;
+    width: 30%;
     max-width: 280px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    border: #ffffff solid 8px;
+    border: whitesmoke solid 4px;
     border-radius: 50%;
 }
 
@@ -213,34 +212,78 @@ aside h1 {
     // border: red solid 1px;
     width: 100%;
     margin: 0 auto;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: $negro;
     text-shadow: 1px 1px 2px white;
-    text-align: center;
-    margin-bottom: 1rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
 }
 
 aside h2 {
     // border: #000 solid 1px;
     width: 100%;
     margin: 0 auto;
-    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
     color: rgb(73, 73, 73);
     text-shadow: 1px 1px 2px white;
-    text-align: center;
+    text-align: left;
 }
 
 .button {
-    background-color: #000;
-    width: 90%;
-    margin: 0 auto;
+    position: absolute;
+    top: 7rem;
+    left: 55%;
+    width: 45%;
+}
+
+.button a {
+    float: right;
+    padding: 1.5% 11%;
+    color: $negro;
+    border: $negro 1.5px solid;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.psique {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(/assets/icons/psi.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.call {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(/assets/icons/phone-call1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cellPhone {
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    background-image: url(/assets/icons/smartphone.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .map {
     display: inline-block;
-    width: 20px;
-    height: 25px;
+    width: 18px;
+    height: 20px;
     background-image: url(https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/google-map.png);
     background-size: cover;
     background-position: center;
@@ -248,38 +291,39 @@ aside h2 {
 }
 
 .verified {
-    position: absolute;
-    // border: red solid 1px;
-    margin-top: -3px;
-    margin-left: -25px;
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     background-image: url(https://images.vexels.com/media/users/3/157931/isolated/preview/604a0cadf94914c7ee6c6e552e9b4487-icono-de-c-iacute-rculo-de-marca-de-verificaci-oacute-n-curvo-by-vexels.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.noneMobile {
+    display: none;
+}
+
+.main-container-inf a:hover {
+    color: $azul;
+}
+
 aside a,
 p {
-    // position: absolute;
     // border: black solid 1px;
     width: 100%;
-    margin: 2% 0%;
     font-size: 1.5rem;
     color: rgb(73, 73, 73);
-    text-align: center;
+    text-align: left;
 }
 
 article {
     // border: black solid 1px;
     position: relative;
-    // background-color: whitesmoke;
     border-radius: 20px;
     width: 100%;
     margin: 0 auto;
-    padding: 3% 0%;
+    padding: 3% 0% 0%;
 }
 
 article h2 {
@@ -289,14 +333,14 @@ article h2 {
     font-size: 2.2rem;
     color: rgb(73, 73, 73);
     text-shadow: 1px 1px 2px white;
-    text-align: center;
+    text-align: left;
 }
 
 article p {
     width: 100%;
-    // margin: 0 auto;
+    margin: 0 auto;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
 }
 
 // Botones
@@ -342,6 +386,10 @@ h3 {
     color: rgb(0, 167, 0);
 }
 
+.text-center {
+    text-align: center;
+}
+
 .currency-table1 {
     display: flex;
     flex-wrap: wrap;
@@ -356,7 +404,7 @@ h3 {
 
 .currency-table--container {
     width: 90%;
-    min-width: 230px;
+    min-width: 100px;
     max-width: 300px;
     height: 250px;
     margin: 0 auto;
@@ -417,12 +465,34 @@ h3 {
     background-repeat: no-repeat;
 }
 
+.currency-table--container .ansiedad1 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/ansiedad1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .currency-table--container .depresion {
     display: inline-block;
     width: 50px;
     height: 50px;
     margin-left: 10px;
     background-image: url('/assets/icons/depresion.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .tristeza {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/tristeza.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -450,8 +520,507 @@ h3 {
     background-repeat: no-repeat;
 }
 
-// .sectionOne {
-//     background: rgb(0, 254, 255);
-//     background: linear-gradient(90deg, rgba(0, 254, 255, 1) 0%, rgba(0, 255, 119, 1) 100%);
-//     padding-bottom: 0.1rem;
-// }
+.currency-table--container .familia {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/familia.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .pareja {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/pareja.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .adicciones {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/adicciones.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .alcohol {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/alcohol.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .suicidio {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/suicidio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .mente {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/mente.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container .panico {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-image: url('/assets/icons/panico.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// SERVICIOS
+.main-plans-container {
+    // border: red solid 1px;
+    width: 90%;
+    margin: 0 auto;
+    min-width: 320px;
+    margin-top: 11rem;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.plans-container--slider {
+    // border: solid 1px red;
+    display: flex;
+    width: 100%;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    @media screen and (min-width: 700px) {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.plans-container--card {
+    // border: solid 1px red;
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 10px 10px 0px;
+    padding: 0 15px;
+    background-color: $blanco;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.plan-card--title {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: $negro;
+}
+
+.plan-card--price {
+    // border: solid 1px red;
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: $negro;
+    position: relative;
+    text-align: center;
+}
+
+.plan-card--price span {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 300;
+    top: -10px;
+    margin-left: calc(-1% - 5px);
+}
+
+.plan-card--saving {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #757575;
+}
+
+.plan-card--ca {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border: solid 2px $azul;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: $negro;
+}
+
+.plan-card--ca a {
+    // border: $azul solid 1px;
+    padding: 11px 16px;
+}
+
+.plan-card--ca span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(/assets/icons/clock.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: text-bottom;
+}
+
+// CONTACTO 
+.login {
+    margin-top: -20px;
+    // border: #000 solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login h2 {
+    // border: #000 solid 1px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.2rem;
+    color: $azul;
+    text-shadow: 1px 1px 2px white;
+    text-align: center;
+}
+
+.login__container {
+    // border: #000 solid 1px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 90%;
+    background-color: transparent;
+    border: 2px solid $azulshadow;
+    border-radius: 40px;
+    color: $blanco;
+    padding: 30px 30px 20px;
+    min-height: 400px;
+    min-width: 300px;
+    max-width: 600px;
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        border-radius: 0px;
+        border: none;
+    }
+}
+
+.login__container--form {
+    // border: #000 solid 1px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+
+.input--register {
+    color: $azuldark;
+    background-color: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid $azulshadow;
+    font-size: 1.2rem;
+    padding-left: 5px;
+    margin: 1rem auto;
+    outline: none;
+    width: 85%;
+    height: 47px;
+    order: 1;
+}
+
+.buttonLog {
+    top: 150px;
+    background-color: transparent;
+    border: $azul solid 1.5px;
+    border-radius: 25px;
+    color: $azul;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: 50px;
+    margin: 10px 0px;
+    outline: none;
+    &:hover {
+        background-color: $azul;
+        border: $blanco solid 1.5px;
+        color: $blanco;
+    }
+}
+
+.login1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.user {
+    display: inline-block;
+    margin: 0 auto;
+    width: 47px;
+    height: 47px;
+    margin-top: 1rem;
+    background-image: url(../assets/icons/profile-user.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    order: 0;
+}
+
+.phone {
+    display: inline-block;
+    margin: 0 auto;
+    width: 47px;
+    height: 47px;
+    margin-top: 1rem;
+    background-image: url(../assets/icons/phone-call.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    order: 0;
+}
+
+.mail {
+    display: inline-block;
+    margin: 0 auto;
+    width: 47px;
+    height: 47px;
+    margin-top: 1rem;
+    background-image: url(../assets/icons/email.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    order: 0;
+}
+
+.font {
+    display: inline-block;
+    margin: 0 auto;
+    width: 47px;
+    height: 47px;
+    margin-top: 1rem;
+    background-image: url(../assets/icons/font.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    order: 0;
+}
+
+footer {
+    background-color: $blanco;
+    box-shadow: 10px 10px 20px rgba(89, 73, 30, 0.16);
+}
+
+footer div {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3% 0;
+}
+
+footer h4 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: rgb(73, 73, 73);
+    text-shadow: 1px 1px 2px white;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgb(73, 73, 73);
+    text-shadow: 1px 1px 2px white;
+    text-align: center;
+}
+
+footer a:hover {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $azul;
+    text-shadow: 1px 1px 2px white;
+    text-align: center;
+}
+
+.contacto-h1 {
+    position: absolute;
+    width: auto;
+    top: 65px;
+    left: 32%;
+    font-size: 2rem;
+}
+
+.contacto-h2 {
+    position: absolute;
+    width: auto;
+    top: 115px;
+    left: 32%;
+    font-size: 1.8rem;
+}
+
+iframe {
+    width: 90%;
+    height: 300px;
+    margin: 0 5%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: $azul solid 1px;
+    @media screen and (min-width: 700px) {
+        width: 50%;
+        height: 400px;
+        margin: 0 25%;
+    }
+}
+
+.iframe {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+// I N D E X
+.mainContainer-index {
+    position: relative;
+    // background-color: red;
+}
+
+.menuToggle-index {
+    background-image: none;
+    height: 60px;
+    background-color: $blanco;
+}
+
+.mainContainer-index h1 {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $azulHover;
+    color: $azultext;
+    font-size: 4rem;
+    padding: 5%;
+}
+
+.cardPsichologist-index {
+    top: 20px;
+    background-color: $blanco;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+    padding: 5%;
+    margin-bottom: 20px;
+}
+
+.main-container-photo {
+    width: 25%;
+}
+
+.buttons-index {
+    // border: solid 1px black;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.button-index {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+}
+
+.button-index a {
+    padding: 1.5%;
+    color: $negro;
+    border: $negro 1.5px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button-index a:hover {
+    background-color: $azul;
+    color: $blanco;
+    border: $blanco 1.5px solid;
+}
+
+.button1-index {
+    margin-left: 2.5%;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.button1-index a {
+    padding: 4%;
+    color: $negro;
+    border: $negro 1.5px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.button1-index a:hover {
+    background-color: $azul;
+    color: $blanco;
+    border: $blanco 1.5px solid;
+}
+
+.main-container-inf-index {
+    width: 75%;
+    left: 25%;
+    position: absolute;
+    top: 1rem;
+    h2 {
+        color: $azultext;
+        padding: 5%;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    h3 {
+        color: gray;
+        margin-top: -1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: left;
+        padding: 0.5%;
+    }
+}
