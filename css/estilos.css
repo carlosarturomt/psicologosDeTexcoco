@@ -197,6 +197,7 @@ picture img {
   max-width: 280px;
   border: whitesmoke solid 4px;
   border-radius: 50%;
+  background-color: #FEFEFE;
 }
 
 aside h1 {
