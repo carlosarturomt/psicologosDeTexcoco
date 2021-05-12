@@ -100,14 +100,14 @@
 <?php
     if (isset($_POST['btn-submit'])) {
 
-        $asunto = "Interesado en Servicio del la Psicóloga AltagraciaCD.";
+        $asunto = "Interesado en Servicio de la Psicóloga AltagraciaCD.";
         $mensaje = test_input($_POST['mensaje']);
         $numero = test_input($_POST['numero']);
         $nombre = test_input($_POST['nombre']);
         $correo = test_input($_POST['correo']);
 
 
-        $destino1 = "carlosarturomt@gmail.com, orochimarudelahoja.5600@gmail.com";
+        $destino1 = "carlosarturomt@gmail.com, sepapsicologia@gmail.com";
 
         $header = "From: web carlosarturomt" . "\r\n";
         $header = "Reply-To: noreply" . "\r\n";
