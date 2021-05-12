@@ -127,7 +127,7 @@
         if ($mail1) {
 
             echo "<h2>Mensaje enviado, gracias por contactarme.</h2>";
-            echo "<meta http-equiv='refresh' content='3,url=index.html'>";
+            echo "<meta http-equiv='refresh' content='3,url=index.php'>";
         } else {
             echo "No se ha podido enviar tu mensaje, intentalo mas tarde";
         }

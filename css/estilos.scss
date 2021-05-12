@@ -1025,3 +1025,20 @@ iframe {
         padding: 0.5%;
     }
 }
+
+.container-form-index {
+    margin-top: 50px;
+    padding: 5%;
+    background-color: $azulHover;
+    h2 {
+        font-size: 3rem;
+        color: $azultext;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 2rem;
+        color: $azultext;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}

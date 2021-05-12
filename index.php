@@ -179,8 +179,35 @@
                     </div>
                 </article>
             </aside>
-
         </section>
+
+        <!-- F O R M U L A R I O -->
+        <section class="login container-form-index">
+            <section class="">
+                <h2>¿Tienes dudas sobre qué tipo terapia o terapeuta es ideal para ti?</h2>
+                <p>¡Escríbenos! Nos pondrémos en contacto contigo vía correo electrónico o WhatsApp para hacerte unas breves preguntas y así ayudarte a elegir y asignar el mejor terapeuta acorde a tu perfil y posibilidades económicas. </p>
+                <form class="login__container--form " action="#" method="POST">
+                    <div class="login1">
+                        <span class="user"></span>
+                        <input class="input--register" type="text" name="nombre" placeholder="Nombre" autocomplete="on" required>
+                    </div>
+                    <div class="login1">
+                        <span class="phone"></span>
+                        <input class="input--register" type="tel" name="numero" placeholder="Teléfono" autocomplete="tel" required>
+                    </div>
+                    <div class="login1">
+                        <span class="mail   "></span>
+                        <input class="input--register" type="email" name="correo" placeholder="Correo" autocomplete="email" required>
+                    </div>
+                    <div class="login1">
+                        <span class="font"></span>
+                        <input class="input--register" type="text" name="mensaje" placeholder="Escribe el Servicio que deseas y déjame tu mensaje" autocomplete="off" required>
+                    </div>
+                    <button type="submit" name="btn-submit" class="buttonLog">Enviar</button>
+                </form>
+            </section>
+        </section>
+
     </main>
 
     <!----------------------------------- BOTÓN FLOTANTE Y PIE DE PÁGINA -------------------------------------------->
@@ -205,3 +232,45 @@
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js " crossorigin="anonymous " aria-label="Dark Theme "></script>
 
 </html>
+
+<?php
+    if (isset($_POST['btn-submit'])) {
+
+        $asunto = "Interesado en Servicio de Psicología desde el index.";
+        $mensaje = test_input($_POST['mensaje']);
+        $numero = test_input($_POST['numero']);
+        $nombre = test_input($_POST['nombre']);
+        $correo = test_input($_POST['correo']);
+
+
+        $destino1 = "carlosarturomt@gmail.com";
+
+        $header = "From: web carlosarturomt" . "\r\n";
+        $header = "Reply-To: noreply" . "\r\n";
+        $header = "X-Mailer: PHP/" . phpversion();
+
+        $carta = "Mensaje: $mensaje \n";
+        $carta .= "Tel. de contacto: $numero \n";
+        $carta .= "Nombre del contacto: $nombre \n";
+        $carta .= "Correo de contacto: $correo \n";
+
+       
+        // $mail1 = mail($destino1, $asunto, $carta, $header);
+        $mail1 = mail($destino1, $asunto, $carta, $header);
+
+        if ($mail1) {
+
+            echo "<h2>Mensaje enviado, gracias por contactarme.</h2>";
+            echo "<meta http-equiv='refresh' content='3,url=index.php'>";
+        } else {
+            echo "No se ha podido enviar tu mensaje, intentalo mas tarde";
+        }
+    }
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    ?>
