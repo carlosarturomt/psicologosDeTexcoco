@@ -8,15 +8,15 @@
     <meta name="author" content="CarlosArturoMT">
     <meta name="DC.creator" content="CarlosArturoMT">
     <meta name="copyright" content="CarlosArturoMT">
-    <meta name="description" content="Licenciado en Psicología, especializado en Educación.">
+    <meta name="description" content="Licenciada en Psicología, especializado en Psicología Clínica.">
     <meta property="og:url" content="https://psicologosDeTexcoco2021.com">
     <meta property="og:type" content="blog">
-    <meta property="og:image" content="https://carlosarturomt.com/assets/imgs/artur/carlosarturomt_elegante.jpg">
-    <meta property="og:image:url" content="https://carlosarturomt.com/assets/imgs/artur/carlosarturomt_elegante.jpg">
-    <meta itemprop="image" content="https://carlosarturomt.com/assets/imgs/artur/carlosarturomt_elegante.jpg ">
-    <meta name="twitter:image" content="https://carlosarturomt.com/assets/imgs/artur/carlosarturomt_elegante.jpg">
-    <meta itemprop="image" content="https://carlosarturomt.com/assets/imgs/artur/carlosarturomt_elegante.jpg ">
-    <title>Psicólog Carlos Arturo MT.</title>
+    <meta property="og:image" content="/assets/imgs/altagraciaColorado.jpg">
+    <meta property="og:image:url" content="/assets/imgs/altagraciaColorado.jpg">
+    <meta itemprop="image" content="/assets/imgs/altagraciaColorado.jpg">
+    <meta name="twitter:image" content="/assets/imgs/altagraciaColorado.jpg">
+    <meta itemprop="image" content="/assets/imgs/altagraciaColorado.jpg">
+    <title>Psicóloga Altagracia Colorado Díaz</title>
     <link rel="icon " type="image/png " href="https://carlosarturomt.com/assets/imgs/carlosarturomt_logo.png ">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 900px)">
@@ -43,14 +43,12 @@
     <section>
             <aside>
                 <picture>
-                <a href="https://psicologosdetexoco2021.carlosarturomt.com/carlosArturoMT"><img class="main-container-photo--agendar" src="https://carlosarturomt.com/assets/imgs/artur/carlosarturomt_elegante.jpg" alt="Psicólgo CarlosArturoMT"></a>
+                <a href="https://psicologosdetexoco2021.carlosarturomt.com/altagraciaColoradoD"><img class="main-container-photo--agendar" src="/assets/imgs/altagraciaColorado.jpg" alt="Psicólgo CarlosArturoMT"></a>
                 </picture>
                 <hgroup>
-                    <h1 class="contacto-h1 text-blue">Lic. Carlos Arturo Miranda Trujano</h1>
-                    <h2 class="contacto-h2"><span class="psique"></span> Psicólogo</h2>
+                    <h1 class="contacto-h1 text-blue">Lic. Altagracia Colorado Díaz</h1>
+                    <h2 class="contacto-h2"><span class="psique"></span> Psicóloga</h2>
                 </hgroup>
-                <!-- <p><span class="verified"></span>No.Cédula: 12247784</p>
-                <p><a href="https://www.google.com/maps/place/Consciente+Colectivo/@19.5104491,-98.8804663,19z/data=!4m5!3m4!1s0x85d1e7b350eeaaab:0x42c02f89b3a284e9!8m2!3d19.5104161!4d-98.8798142?hl=en" target="_blank"><span class="map"></span>Aldama 148 col el Carmen, Texcoco</a></p> -->
             </aside>
         </section>
 
@@ -102,14 +100,14 @@
 <?php
     if (isset($_POST['btn-submit'])) {
 
-        $asunto = "Interesado en Servicio Psicología";
+        $asunto = "Interesado en Servicio del la Psicóloga AltagraciaCD.";
         $mensaje = test_input($_POST['mensaje']);
         $numero = test_input($_POST['numero']);
         $nombre = test_input($_POST['nombre']);
         $correo = test_input($_POST['correo']);
 
 
-        $destino1 = "carlosarturomt@gmail.com";
+        $destino1 = "carlosarturomt@gmail.com, orochimarudelahoja.5600@gmail.com";
 
         $header = "From: web carlosarturomt" . "\r\n";
         $header = "Reply-To: noreply" . "\r\n";
